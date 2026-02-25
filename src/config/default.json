@@ -1,0 +1,124 @@
+{
+  "language": "it",
+  "prefix": "!",
+  "embed_colors": {
+    "success": "#2ECC71",
+    "error": "#E74C3C",
+    "info": "#3498DB",
+    "warn": "#F39C12",
+    "moderation": "#E67E22",
+    "ticket": "#9B59B6",
+    "log": "#607D8B"
+  },
+  "permissions": {
+    "admin_roles": [],
+    "moderator_roles": [],
+    "staff_roles": []
+  },
+  "tickets": {
+    "enabled": true,
+    "category_id": "",
+    "log_channel": "",
+    "max_per_user": 3,
+    "auto_close_hours": 48,
+    "auto_close_warning_minutes": 60,
+    "transcript_channel": "",
+    "counter": 0,
+    "categories": {
+      "technical": {
+        "label": "Technical Issue",
+        "emoji": "🔧",
+        "description": "Report a technical problem or bug"
+      },
+      "commercial": {
+        "label": "Commercial Issue",
+        "emoji": "💰",
+        "description": "Billing, payments, or commercial inquiries"
+      },
+      "other": {
+        "label": "Other Issue",
+        "emoji": "📋",
+        "description": "General questions or other requests"
+      }
+    }
+  },
+  "moderation": {
+    "log_channel": "",
+    "dm_on_action": true,
+    "warn_thresholds": {
+      "mute_at": 3,
+      "mute_duration_minutes": 30,
+      "kick_at": 5,
+      "ban_at": 7
+    }
+  },
+  "anti_spam": {
+    "enabled": true,
+    "duplicate_threshold": 3,
+    "duplicate_interval_seconds": 10,
+    "flood_threshold": 5,
+    "flood_interval_seconds": 5,
+    "mass_mention_threshold": 5,
+    "link_threshold": 3,
+    "link_interval_seconds": 10,
+    "action": "warn",
+    "exempt_roles": [],
+    "exempt_channels": []
+  },
+  "anti_raid": {
+    "enabled": true,
+    "join_threshold": 10,
+    "join_interval_seconds": 10,
+    "min_account_age_days": 7,
+    "action": "kick",
+    "lockdown_exempt_channels": [],
+    "notify_channel": ""
+  },
+  "toxicity": {
+    "enabled": true,
+    "api_key": "",
+    "threshold": 0.65,
+    "log_channel": "",
+    "rate_limit_per_second": 1,
+    "exempt_roles": [],
+    "exempt_channels": [],
+    "progressive_actions": [
+      { "offense": 1, "action": "warn", "duration_minutes": 0 },
+      { "offense": 2, "action": "mute", "duration_minutes": 10 },
+      { "offense": 3, "action": "timeout", "duration_minutes": 60 },
+      { "offense": 4, "action": "ban", "duration_minutes": 0 }
+    ]
+  },
+  "logging": {
+    "message_channel": "",
+    "join_channel": "",
+    "moderation_channel": "",
+    "voice_channel": "",
+    "ignore_bots": true
+  },
+  "communication": {
+    "changelog_channel": "",
+    "changelog_mention_role": "",
+    "announce_channel": "",
+    "announce_default_color": "#3498DB"
+  },
+  "welcome": {
+    "enabled": false,
+    "channel": "",
+    "title": "Welcome!",
+    "message": "Welcome {user} to **{server}**! You are member #{memberCount}.",
+    "color": "#2ECC71",
+    "image": "",
+    "thumbnail": ""
+  },
+  "goodbye": {
+    "enabled": false,
+    "channel": "",
+    "title": "Goodbye!",
+    "message": "{user} has left **{server}**. We now have {memberCount} members.",
+    "color": "#E74C3C",
+    "image": "",
+    "thumbnail": ""
+  },
+  "command_permissions": {}
+}
